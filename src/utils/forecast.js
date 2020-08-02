@@ -13,7 +13,8 @@ const forecast = (latitude,longitude,callback) => {
       } else{
           callback(undefined,{
             main : body.weather[0].main,
-            description : body.weather[0].description 
+            description : body.weather[0].description,
+            temp:body.main.temp 
           })
       }
     
