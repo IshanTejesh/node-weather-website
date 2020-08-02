@@ -12,7 +12,7 @@ const forecast = require('./utils/forecast')
 
 
 const app = express()
-const port = 3000
+const port =  process.env.PORT || 3000
 
 //Define paths for Exrpess config
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -142,4 +142,4 @@ app.get('*', (req, res) => {
 //app.com/help
 //app.com/about
 
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
+app.listen(port, () => console.log(`Example app listening at ${port}`)) //http://localhost:${port}
